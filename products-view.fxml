@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.demo.ProductController"
+            prefHeight="400.0" prefWidth="600.0">
+    <padding>
+        <Insets topRightBottomLeft="20"/>
+    </padding>
+    <top>
+        <HBox spacing="20">
+            <children>
+                <Label text="Name"/>
+                <TextField fx:id="FieldNom"/>
+                <Label text="Price"/>
+                <TextField fx:id="FieldPrice"/>
+                <Button onAction="#addPro" text="Add"/>
+                <TextField fx:id="FieldSearch" promptText="Search..."/>
+                <Button onAction="#searchPro" fx:id="searchButton" text="search"/>
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <ListView fx:id="productListView"/>
+    </center>
+</BorderPane>
